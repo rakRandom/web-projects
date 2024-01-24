@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clima </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1> Clima </h1>
+    <div class="search-form">
+        <label for="cidade-field"></label>
+        <input name="cidade-field" id="cidade-field" placeholder="Cidade" type="search" maxlength="20">
+        <button id="clima-button" onclick="" type="button"> Buscar </button>
+    </div>
+    <p id="warn-label" style="display: none;">  </p>
+    <div class="result" style="display: none;">
+        <h2 id="name-label"> Nome da cidade - País </h2>
+        <div class="result-informations">
+            <div class="section">
+                <p> Temperatura </p>
+                <div style="display: flex; flex-direction: row;">
+                    <h3 id="temp-label">00.00</h3>
+                    <sup>°C</sup>
+                </div>
+            </div>
+            <div class="section">
+                <p> Vento </p>
+                <div style="display: flex; flex-direction: row;">
+                    <h3 id="wind-label">0.00</h3>
+                    <sub style="align-self: flex-end;">km/h</sub>
+                </div>
+            </div>
+        </div>
+        <div>
+            Máx: <span id="max-temp-label">00</span>°C - Min: <span id="min-temp-label">00</span>°C
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Criado por: <a href="https://github.com/rakRandom" target="_blank">Fellipe Leonardo / @rakRandom</a></p>
+</footer>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

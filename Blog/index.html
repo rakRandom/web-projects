@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Blog Glob</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="no-transition">
+<header>
+    <h1> Blog Glob </h1>
+</header>
+<div class="container">
+<main>
+    <fieldset class="post-form">
+        <h2> Insira um novo post! </h2>
+        <div>
+            <label for="title-field"></label>
+            <input name="title-field" id="title-field" placeholder="Título do post" type="text" maxlength="50">
+        </div>
+        <div>
+            <label for="body-field"></label>
+            <textarea 
+                name="body-field" 
+                id="body-field" 
+                cols="30" 
+                rows="10" 
+                placeholder="No que você está pensando?"
+                maxlength="500"></textarea>
+            <p id="character-counter">0/500</p>
+        </div>
+        <div>
+            <button id="submit" onclick=""> Postar </button>
+        </div>
+    </fieldset>
+    <div class="line"></div>
+    <div class="posts">
+        <h2> Outros posts </h2>
+        <ul class="posts-feed">
+        <li>
+            <fieldset>
+                <h3 class="post-title"> Lorem ipsum </h3>
+                <p class="post-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed pretium tellus. 
+                    Vestibulum scelerisque nisi tincidunt ex rutrum, eu fermentum arcu pellentesque. 
+                    Cras mi elit, pulvinar eu velit bibendum, sollicitudin fermentum nisi. Proin malesuada cursus euismod. 
+                    Duis posuere justo at velit tempor, a mollis odio accumsan. Aliquam sodales venenatis purus nec fermentum. 
+                    Proin erat enim, commodo non venenatis in, volutpat id tellus. Curabitur euismod cursus odio ut laoreet.
+                </p>
+            </fieldset>
+        </li>
+
+        <li>
+            <fieldset>
+                <h3 class="post-title"> Oi </h3>
+                <p class="post-body">
+                    Tudo bem?
+                </p>
+            </fieldset>
+        </li>
+        </ul>
+    </div>
+</main>
+</div>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

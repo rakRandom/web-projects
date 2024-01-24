@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+:root {
+    --darkest-color: #202020;
+    --darker-color: #343334;
+    --dark-color: #565556;
+    --white-color: #CDCDCD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--white-color);
+    outline: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--darker-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 400px;
+    margin: 100px auto 0;
+} 
+.search-form {
+    display: flex;
+    width: 100%;
+} .search-form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: var(--darker-color);
+    font-size: 16px;
+} .search-form button {
+    padding: 10px;
+    margin-left: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: var(--dark-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.1s;
+} .search-form button:hover {
+    border: 1px solid var(--white-color);
+    background-color: var(--darker-color);
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--darkest-color);
+} .result .result-informations {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+} .result .result-informations .section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} .result .result-informations p {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+} .result .result-informations h3 {
+    font-size: 34px;
+} .result .result-informations sup,  .result .result-informations sub{
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--darkest-color);
+} footer a {
+    text-decoration: none;
+    font-size: 1.1em;
+    opacity: 0.75;
+    transition: 0.25s;
+} footer a:hover {
+    opacity: 1;
+}

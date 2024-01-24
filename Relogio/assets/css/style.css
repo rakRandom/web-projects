@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+:root {
+    --darker-color: #202020;
+    --dark-color: #343334;
+    --white-color: #CDCDCD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--white-color);
+    outline: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 300px;
+    margin: 100px auto 0;
+} #time-label {
+    font-size: 42px;
+}
+
+.relogio {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.riscos {
+    width: 100%;
+    height: 100%;
+    padding-left: 50%;
+    padding-top: 50%;
+    margin-top: -3px;
+}
+.risco {
+    width: 145px;
+    height: 5px;
+    position: absolute;
+    transform-origin: left;
+    display: flex;
+    justify-content: flex-end;
+}
+.risco .ponto {
+    width: 15px;
+    height: 100%;
+    background-color: #FFF;
+}
+
+.ponteiros {
+    width: 100%;
+    height: 100%;
+    padding-left: 50%;
+    padding-top: 50%;
+    margin-top: -100%;
+}
+.p {
+    transform-origin: left;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.p_s {
+    width: 100px;
+    height: 3px;
+    background-color: #F00;
+}
+.p_m {
+    width: 120px;
+    height: 7px;
+    background-color: #FFF;
+}
+.p_h {
+    width: 70px;
+    height: 10px;
+    background-color: #FFF;
+}
+.encaixe {
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -7px;
+    margin-left: -10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--darker-color);
+} footer a {
+    text-decoration: none;
+    font-size: 1.1em;
+    opacity: 0.75;
+    transition: 0.25s;
+} footer a:hover {
+    opacity: 1;
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+:root {
+    --dark-font: #202020;
+    --light-font: #DFDFDF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--dark-font);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+} .no-transition * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 145, 0);
+} header h1 {
+    color: var(--light-font);
+    user-select: none;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto 0;
+}
+
+/* Post form */
+@media (min-width: 801px) {
+    .post-form {
+        width: 50%;
+        margin: 0 auto 0;
+        border-radius: 8px;
+    }
+}
+@media (max-width: 800px) {
+    .post-form {
+        width: 75%;
+        margin: 0 auto 0;
+        border-radius: 8px;
+    }
+}
+@media (max-width: 512px) {
+    .post-form {
+        width: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+} .post-form h2 {
+    user-select: none;
+    margin-bottom: 10px;
+    align-self: center;
+    font-weight: 100;
+} .post-form input {
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+    outline: none;
+} .post-form textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    resize: none;
+    outline: none;
+} .post-form button {
+    user-select: none;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+} .post-form button:hover {
+    background-color: red;
+    color: var(--light-font);
+}
+
+/* Separation Line */
+.line {
+    width: 100%;
+    border-top: 1px solid gray;
+    margin: 50px 0 50px 0;
+}
+
+/* Other posts */
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 0;
+} .posts-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin-top: 25px;
+} .posts-feed li {
+    width: 460px;
+    min-height: 105px;
+} .posts-feed li fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+} .posts-feed li fieldset * {
+    word-wrap: break-word;
+    max-width: 410px;
+}
