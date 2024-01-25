@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/results.js"></script>
+</head>
+<body>
+<div class="container" id="main">
+    <h1 class="title">Pergunta --/--</h1>
+    <p class="question"> ---------- </p>
+    <ul class="answer-list">
+        <li>
+            <button class="answer" type="button" id="answer1">-</button>
+        </li>
+        <li>
+            <button class="answer" type="button" id="answer2">-</button>
+        </li>
+        <li>
+            <button class="answer" type="button" id="answer3">-</button>
+        </li>
+        <li>
+            <button class="answer" type="button" id="answer4">-</button>
+        </li>
+    </ul>
+</div>
+<div class="container" id="results-div" style="display: none;">
+    <h1> Parabéns! </h1>
+    <p class="question">Seus resultados foram...</p>
+    <h2 class="results-title">--/--</h2>
+    <button type="button" onclick="location.reload()" class="try-again"> Tentar novamente </button>
+</div>
+<footer>
+    <p>Criado por: <a href="https://github.com/rakRandom" target="_blank">Fellipe Leonardo / @rakRandom</a></p>
+</footer>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

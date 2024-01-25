@@ -1,0 +1,57 @@
+// JSON require live-server
+
+/*
+const question_list = [
+    {
+        head: "Quando nasceu Pedro Alvares Cabral?",
+        body: [
+            "Não sei",
+            "Eu sei, mas não quero contar",
+            "Talvez eu saba, mas e se eu não sabar?",
+            "Nenhuma das anteriores"
+        ],
+        right_answer: 0
+    },
+    {
+        head: "Questão 2",
+        body: [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        right_answer: 0
+    },
+    {
+        head: "",
+        body: [
+            "",
+            "",
+            "",
+            ""
+        ],
+        right_answer: 0
+    },
+    {
+        head: "",
+        body: [
+            "",
+            "",
+            "",
+            ""
+        ],
+        right_answer: 0
+    },
+    {
+        head: "",
+        body: [
+            "",
+            "",
+            "",
+            ""
+        ],
+        right_answer: 0
+    },
+]
+*/
+
