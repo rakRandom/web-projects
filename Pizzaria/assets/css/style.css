@@ -337,14 +337,17 @@ h1 {
     font-weight: bold;
 }
 .cart--finalizar {
-    padding:20px 30px;
+    width: 75%;
+    padding:20px 25px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#3eb853;
     color:#FFF;
     cursor:pointer;
     text-align:center;
-    margin-top:20px;
+    margin: 25px auto 0;
     border:2px solid #63f77c;
+    font-size: 20px;
+    font-weight: bold;
     transition: all ease .2s;
 }
 .cart--finalizar:hover {
