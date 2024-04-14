@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+<body>
+    <div class="hidden" id="models">
+        <li id="items-model" class="flex items-center w-full pt-4 mt-4">
+            <div id="qt" class="truncate w-[2ch] mx-1">
+                0
+            </div>
+            x
+            <div id="name" class="flex-1 truncate px-1">
+                Nome do produto
+            </div>
+            |
+            <div id="value" class="truncate w-[9ch] mx-1">
+                R$ 0.00
+            </div>
+            <button id="close-button" class="w-[30px] h-[30px] bg-slate-200 hover:bg-slate-300 rounded-xl">
+                X
+            </button>
+        </li>
+    </div>
+
+    <div class="sm:w-fit mx-auto my-8">
+        <h1 class="text-center text-3xl font-semibold mb-8 select-none">
+            Expense Tracker
+        </h1>
+        
+        <div class="p-2">
+            <div>
+                <label for="search"></label>
+                <input type="search" name="search" id="input-search" placeholder="Pesquisar" class="w-full p-2 border focus:border-yellow-400 outline-none">
+            </div>
+    
+            <hr class="w-full my-4 border-slate-500">
+    
+            <div class="grid grid-cols-2 px-2">
+                <div class="select-none">
+                    Total: R$<span id="output-value" class="cursor-pointer">0.00</span> 
+                </div>
+                <div class="select-none">
+                    Quantidade: <span id="output-qt" class="cursor-pointer">0</span> 
+                </div>
+            </div>
+    
+            <hr class="w-full my-4 border-slate-500">
+    
+            <div class="flex divide-x">
+                <div class="px-2">
+                    <label for="qtnd"></label>
+                    <input type="number" name="qtnd" id="input-qt" placeholder="Qt" min="1" max="99" class="w-[6ch] px-2 py-1 border focus:border-yellow-400 rounded-l-md outline-none">
+                </div>
+                <div class="flex-1 px-2">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="input-name" placeholder="Nome" required class="w-full px-2 py-1 border focus:border-yellow-400 outline-none">
+                </div>
+                <div class="px-2">
+                    <label for="val"></label>
+                    <input type="number" name="val" id="input-value" placeholder="Valor" step="0.01" min="0.01" max="999.99" required class="w-[9.25ch] px-2 py-1 border focus:border-yellow-400 outline-none">
+                </div>
+    
+                <button id="button-add" type="button" class="text-white px-3 py-1 bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-r-md cursor-pointer">
+                    Add
+                </button>
+            </div>
+        </div>
+        
+
+        <div class="px-4 pb-8 pt-0 mt-6 bg-neutral-100 border sm:rounded-xl sm:shadow-md">
+            <ul id="products-list" class="flex flex-col divide-y-2">
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
