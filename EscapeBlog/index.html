@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :target { scroll-margin-top: 32px; }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col h-[720px] w-full border-b bg-[url('./img/a.jpg')] bg-cover bg-center">
+        <img src="./img/a.jpg" alt="" class="-z-10 absolute inset-0 w-full h-[720px] object-cover">
+        <header class="absolute top-0 w-full h-[64px] bg-gray-800/25">
+            <div class="flex items-center w-[928px] h-full mx-auto">
+                <h1 class="text-3xl text-white font-semibold cursor-pointer hover:drop-shadow-xl">
+                    English
+                </h1>
+                <nav class="text-xs text-white/75 ml-auto">
+                    <ul class="flex gap-8">
+                        <li> <a href="" class="hover:text-white hover:drop-shadow-lg transition-colors">HOME</a> </li>
+                        <li> <a href="" class="hover:text-white hover:drop-shadow-lg transition-colors">CATEGORIES</a> </li>
+                        <li> <a href="" class="hover:text-white hover:drop-shadow-lg transition-colors">ABOUT</a> </li>
+                        <li> <a href="" class="hover:text-white hover:drop-shadow-lg transition-colors">CONTACT</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="flex-1 flex items-center justify-center text-white">
+            <div class="flex flex-col gap-6 items-center p-8 bg-neutral-800/40 rounded">
+                <h2 class="text-5xl select-none">
+                    Let's do it together.
+                </h2>
+                <p class="text-lg text-neutral-200/90">
+                    We travel the world in search of stories. Come along for the ride.
+                </p>
+                <a href="#most-recent" class="px-6 py-2 bg-orange-500/80 active:bg-orange-500 rounded-lg">
+                    View Latest Posts
+                </a>
+            </div>
+        </div>
+
+        <nav class="h-[64px] text-sm text-black/50 bg-white shadow-md">
+            <ul class="flex items-center gap-2 w-[928px] h-full mx-auto">
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Nature
+                    </a>
+                </li>
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Photography
+                    </a>
+                </li>
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Relaxation
+                    </a>
+                </li>
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Vacation
+                    </a>
+                </li>
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Travel
+                    </a>
+                </li>
+                <li class="flex-1 flex items-center justify-center h-full">
+                    <a href="" class="flex items-center justify-center w-full h-[75%] hover:border-[1px] hover:shadow transition-shadow">
+                        Adventure
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <main class="py-20 bg-neutral-100">
+        <div class="flex flex-col gap-14 w-[928px] mx-auto">
+            <section>
+                <div class="w-fit mx-auto mb-6">
+                    <h2 class="text-2xl text-center mb-4">
+                        Featured Posts
+                    </h2>
+                    <hr class="w-[200px]">
+                </div>
+
+                <div class="flex gap-6 *:flex-1 *:aspect-[5/3] *:rounded">
+                    <div class="flex flex-col bg-[url('./img/d.jpg')] bg-cover bg-center overflow-hidden">
+                        <div class="flex-1 relative">
+                            <button type="button" class="absolute top-6 left-6 text-sm text-white font-light px-3 py-1 bg-purple-500/75 rounded">
+                                PHOTOGRAPHY
+                            </button>
+                        </div>
+                        
+                        <div class="flex flex-col justify-end gap-3 text-white px-6 h-[65%] bg-gradient-to-b from-gray-600/10 to-gray-900/90">
+                            <div>
+                                <h3 class="text-3xl font-light mb-1">
+                                    This is a title
+                                </h3>
+                                <p class="text-neutral-300/90">
+                                    This long text in a mid gray color is a description.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2 text-sm mt-4 mb-6 text-neutral-300/75 *:drop-shadow-lg">
+                                <a href="" class="h-[150%] bg-[url('./img/c.jpg')] bg-cover bg-center aspect-square rounded-full">
+                                    <img src="" alt="">
+                                </a>
+                                <a href="" class="hover:underline">Unknown Author</a>
+                                <p class="ml-auto">
+                                    May 19, 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-[url('./img/e.jpg')] bg-cover bg-center overflow-hidden">
+                        <div class="flex-1 relative">
+                            <button type="button" class="absolute top-6 left-6 text-sm text-white font-light px-3 py-1 bg-orange-600/75 rounded">
+                                ADVENTURE
+                            </button>
+                        </div>
+                        
+                        <div class="flex flex-col justify-end gap-3 text-white px-6 h-[65%] bg-gradient-to-b from-gray-600/10 to-gray-900/90">
+                            <div>
+                                <h3 class="text-3xl font-light mb-1">
+                                    This is a title
+                                </h3>
+                                <p class="text-neutral-300/90">
+                                    This long text in a mid gray color is a description.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2 text-sm mt-4 mb-6 text-neutral-300/75 *:drop-shadow-lg">
+                                <a href="" class="h-[150%] bg-[url('./img/c.jpg')] bg-cover bg-center aspect-square rounded-full">
+                                    <img src="" alt="">
+                                </a>
+                                <a href="" class="hover:underline">Unknown Author</a>
+                                <p class="ml-auto">
+                                    May 19, 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="most-recent">
+                <div class="w-fit mx-auto mb-6">
+                    <h2 class="text-2xl text-center mb-4">
+                        Most Recent
+                    </h2>
+                    <hr class="w-[200px]">
+                </div>
+                
+                <div class="grid grid-cols-3 gap-6 *:aspect-square *:bg-neutral-200 *:rounded">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="h-[378px] bg-[url('./img/footer_bg.jpg')] bg-cover shadow-inner">
+        <footer class="flex flex-col h-full bg-gray-800/50">
+            <div class="flex-1 flex flex-col gap-4 items-center justify-center w-full">
+                <div class="w-fit mb-2">
+                    <h2 class="text-3xl text-center text-white font-semibold mb-4">
+                        Stay in Touch
+                    </h2>
+                    <hr class="w-[225px]">
+                </div>
+                <form action="" method="post">
+                    <div class="flex rounded overflow-hidden">
+                        <input type="email" placeholder="Enter your email address" class="px-4 w-[350px] outline-none">
+                        <input type="submit" value="Submit" class="text-white px-8 py-3 cursor-pointer bg-neutral-400/75 hover:bg-neutral-400 active:bg-neutral-500">
+                    </div>
+                </form>
+            </div>
+
+            <div class="flex h-[88px] bg-gray-800/75 border-t-[1px] border-gray-600/75">
+                <div class="flex items-center w-[928px] h-full mx-auto">
+                    <h1 class="text-2xl text-white cursor-pointer">
+                        English
+                    </h1>
+                    <nav class="text-xs text-white/75 ml-auto">
+                        <ul class="flex gap-8">
+                            <li> <a href="" class="hover:text-white transition-colors">HOME</a> </li>
+                            <li> <a href="" class="hover:text-white transition-colors">CATEGORIES</a> </li>
+                            <li> <a href="" class="hover:text-white transition-colors">ABOUT</a> </li>
+                            <li> <a href="" class="hover:text-white transition-colors">CONTACT</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
