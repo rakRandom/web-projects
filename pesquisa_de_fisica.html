@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pesquisa de Física </title>
+
+    <!-- TailwindCSS configurations -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'selector',
+        }
+    </script>
+</head>
+<body class="w-full h-full py-16 dark:bg-[#181818] dark:text-neutral-300 overflow-y-auto">
+    <!-- Theme Toggle Button -->
+    <button type="button" id="theme-button" class="absolute font-semibold top-4 left-4 h-[35px] aspect-square border-2 border-orange-500 dark:border-neutral-700 rounded-md">
+        O
+    </button>
+
+    <!-- Main Section: Title and Paragraphs -->
+    <div class="mx-auto p-4 pt-6 sm:p-8 md:p-20 md:pt-10 md:w-[680px] border-2 max-md:border-x-0 border-orange-500 dark:border-neutral-700 md:rounded-lg shadow-lg">
+        <h1 class="font-semibold text-2xl md:text-3xl text-center" id="text-title"></h1>
+        <hr class="border-t-2 border-orange-500 dark:border-neutral-700 my-4 md:my-8">
+        <div class="flex flex-col gap-4 indent-8 text-lg text-justify" id="text-container"></div>
+    </div>
+
+    <!-- Link to my github -->
+    <p class="mt-8 text-center">
+        Made by: <a href="https://github.com/rakRandom" class="hover:underline" target="_blank">rakRandom</a>
+    </p>
+
+    <script>
+        const body = document.querySelector("body");
+        const themeButton = body.querySelector("#theme-button");
+        const textTitle = body.querySelector("#text-title");
+        const textContainer = body.querySelector("#text-container");
+
+        // Setting the theme based on the user preference
+        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (darkThemeMq.matches) {
+            body.classList.add("dark")
+        }
+
+        // Adding dynamic text to the page
+        const title = "Conclusão"
+        const paragraphs = [
+            "Com essa pesquisa, podemos concluir que relâmpagos são descargas elétricas que ocorrem devido à separação de cargas nas nuvens, especialmente em tempestades, mas não se limitando apenas a elas. Não podemos confundir relâmpago, trovão e raio, pois trovão é o barulho, raio é a luz e relâmpago é o fenômeno em si.",
+            "Esse fenômeno resulta de um desequilíbrio no campo elétrico entre a nuvem e a terra ou entre diferentes partes da nuvem, sendo então o resultado de vários processos específicos em uma sequência específica, podendo ser considerado uma maravilha da natureza.",
+            "Embora imprevisíveis, os relâmpagos podem ser evitados com medidas de segurança, como evitar áreas abertas e corpos d'água durante tempestades e o uso de para-raios em edificações. Essas precauções ajudam a minimizar os riscos e garantir a segurança diante das descargas atmosféricas que conhecemos como relâmpagos.",
+        ];
+
+        textTitle.innerText = title;
+        paragraphs.forEach(text => {
+            let p = document.createElement("p");
+            p.innerText = text;
+            textContainer.appendChild(p);
+        });
+
+        // Adding functionality to the theme toggle button
+        themeButton.addEventListener("click", () => {
+            body.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>
