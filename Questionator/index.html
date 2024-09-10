@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark font-mono">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Questionator </title>
+    <script src="questions.js"></script>
+    <script src="buildMethods.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            "darkMode": "selector",
+            theme: {
+                fontFamily: {
+                    'mono': ['Roboto']
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-black dark:text-[#CCC] bg-white dark:bg-[#232323]">
+    <div id="container" class="flex flex-col gap-12 *:pt-12 divide-y w-[800px] mx-auto mt-4 mb-44">
+        <h1 class="font-semibold text-3xl text-center">
+            Biology Questions
+        </h1>
+    </div>
+
+    <script>
+        const $ = selectors => document.querySelector(selectors);
+        const has = e => !(e === null || e === undefined);
+
+        const container = $("#container");
+
+        function buildQuestions(questions) {
+            let questionNumber = 1;
+
+            function build(fn, q) {
+                q.title = `${questionNumber}. ${q.title}`;
+
+                if (fn(q, container) === true)
+                    questionNumber++;
+            }
+
+            let buildMethods = {
+                "dissertative": buildDissertative,
+                "alternative": buildAlternative,
+                "relational": buildRelational,
+                "factual": buildFactual,
+            };
+
+            questions.forEach(question => {
+                if (!(has(question.type) || has(question.title) || has(question.body)))
+                    return;
+                
+                if(buildMethods[question.type] === null || buildMethods[question.type] === undefined)
+                    return;
+
+                build(buildMethods[question.type], question);
+            });
+        }
+
+        buildQuestions(questions);
+    </script>
+
+    
+    <style>
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            margin-bottom: 0.25rem;
+            margin-left: 0.5rem;
+        }
+
+        input[type=text] {
+            background-color: transparent;
+            width: 5ch;
+
+            border: 2px solid #404040;
+            border-radius: 5px;
+
+            padding: 0.25rem;
+            margin-bottom: 1rem;
+
+            text-align: center;
+        }
+
+        textarea {
+            resize: none;
+            field-sizing: content;
+
+            background-color: transparent;
+            width: 100%;
+
+            border: 2px solid #404040;
+            border-radius: 5px;
+
+            padding: 5px;
+
+            max-height: 200px;
+        }
+
+        input,
+        textarea {
+            outline: none
+        }
+    </style>
+</body>
+</html>
